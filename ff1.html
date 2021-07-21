@@ -1,0 +1,50 @@
+<body>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta title="Hang Out 3 Student book">
+        <style>
+            .flex-container {
+                display: flex;
+                flex-wrap: wrap;
+                background-color: DodgerBlue;
+            }
+            
+            .flex-container > button {
+                background-color: #f1f1f1;
+                width: 50px;
+                margin: 5px;
+                text-align: center;
+                line-height: 40px;
+                font-size: 25px;
+            }
+            
+            .flex-container > a {
+                background-color: #f1f1f1;
+                margin: 5px;
+                padding: 2px 5px;
+                text-align: center;
+                line-height: 40px;
+                font-size: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <audio id="aud" controls="" loop="" src="https://tdn.khaiminhduc.com/sukien/BanTin27_7.mp3" type="audio/mp3"></audio>
+        <h1>Các file nghe</h1>
+        <div class="flex-container">
+            <button onclick="changeFile('BanTin27_7')">1</button>
+        </div>
+
+        <script>
+            function changeFile(file) {
+   
+                var englishCdn = 'https://tdn.khaiminhduc.com/sukien/';
+
+                var url = englishCdn + file + ".mp3";
+                var audio = document.getElementById("aud");
+                audio.src = url;
+                audio.play();
+            }
+        </script>
+    </body>
+</body>
